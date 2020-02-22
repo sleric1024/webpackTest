@@ -1,5 +1,6 @@
 const path = require('path');
 //const uglify = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     // <---- disables uglify.
@@ -37,6 +38,13 @@ module.exports = {
     //插件，用于生产模版和各项功能
     plugins:[
       //new uglify()
+      new HtmlWebpackPlugin({
+        minify: {
+          removeAttributeQuotes: true
+        },
+        hash:true,
+        template:'./src/index.html'
+      })
     ],
     //配置webpack开发服务功能
     devServer:{
