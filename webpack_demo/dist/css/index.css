@@ -1,0 +1,9 @@
+body {
+  background-color: cadetblue;
+  color: khaki;
+}
+#github {
+  background-image: url(http://localhost:1818/6236179b0562b8043a561bed47772e97.jpg);
+  width: 350px;
+  height: 300px;
+}
