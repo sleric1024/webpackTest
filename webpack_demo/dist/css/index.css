@@ -6,4 +6,9 @@ body {
   background-image: url(http://localhost:1818/images/6236179b0562b8043a561bed47772e97.jpg);
   width: 350px;
   height: 300px;
+}#lessdiv {
+  width: 200px;
+  height: 200px;
+  background-color: #000;
 }
+#sassdiv{width:100%;background-color:red;height:100px}

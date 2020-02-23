@@ -57,6 +57,35 @@ module.exports = {
           use: [{
             loader: 'html-withimg-loader'
           }]
+        }, {
+          // test: /\.less$/,
+          // use: [{
+          //   loader: 'style-loader' // creates style nodes from JS strings
+          // }, {
+          //   loader: 'css-loader' // translates CSS into CommonJS
+          // }, {
+          //   loader: 'less-loader' // compiles Less to CSS
+          // }]
+          test: /\.less$/,
+          use: ExtractTextPlugin.extract({
+            use: [{
+              loader: 'css-loader'
+            }, {
+              loader: 'less-loader'
+            }],
+            // use style-loader in development
+            fallback: 'style-loader'
+          })
+        }, {
+          test: /\.scss$/,
+          use: ExtractTextPlugin.extract({
+            use: [{
+              loader: 'css-loader',
+            }, {
+              loader: 'sass-loader'
+            }],
+            fallback: 'style-loader'
+          })
         }
       ]
     },
