@@ -47,8 +47,15 @@ module.exports = {
           use: [{
             loader: 'url-loader',
             options: {
-              limit: 5000
+              limit: 5000,
+              outputPath:'images/',
+              esModule: false
             }
+          }]
+        }, {
+          test: /\.(htm|html)$/,
+          use: [{
+            loader: 'html-withimg-loader'
           }]
         }
       ]
