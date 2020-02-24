@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const glob = require('glob');
 const PurifyCSSPlugin = require('purifycss-webpack');
+const entry = require('./webpack_config/entry_webpack.js');
 
 let website;
 if (process.env.type === 'build') {
@@ -27,10 +28,8 @@ module.exports = {
     },
 
     //入口文件的配置项
-    entry: {
-      entry: './src/entry.js',
-      entry2: './src/entry2.js'
-    },
+    entry: entry.path,
+
     //出口文件的配置项
     output: {
       path: path.resolve(__dirname, 'dist'),
