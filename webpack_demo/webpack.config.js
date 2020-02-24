@@ -10,6 +10,8 @@ var website ={
 };
 
 module.exports = {
+    devtool: 'esource-map',
+
     // <---- disables uglify.
     // minimizer: [new UglifyJsPlugin()] <----- if you want to customize it.
     optimization:{
