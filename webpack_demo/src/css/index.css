@@ -9,3 +9,7 @@ body {
   transform: rotate(45deg);
   box-shadow: blanchedalmond 4px 4px;
 }
+
+#unused {
+  color: red;
+}

@@ -2,6 +2,8 @@ const path = require('path');
 //const uglify = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const glob = require('glob');
+const PurifyCSSPlugin = require('purifycss-webpack');
 
 var website ={
   publicPath: "http://localhost:1818/"
@@ -114,7 +116,10 @@ module.exports = {
         hash:true,
         template:'./src/index.html'
       }),
-      new ExtractTextPlugin('css/index.css')
+      new ExtractTextPlugin('css/index.css'),
+      new PurifyCSSPlugin({
+        paths: glob.sync(path.join(__dirname, 'src/*.html')),
+      })
     ],
     //配置webpack开发服务功能
     devServer:{

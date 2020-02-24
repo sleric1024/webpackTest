@@ -3,16 +3,24 @@
   height: 200px;
   background-color: #000;
 }
+
 body {
   background-color: cadetblue;
   color: khaki;
 }
+
 #github {
   background-image: url(http://localhost:1818/images/6236179b0562b8043a561bed47772e97.jpg);
   width: 350px;
   height: 300px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   -webkit-box-shadow: blanchedalmond 4px 4px;
-          box-shadow: blanchedalmond 4px 4px;
-}#sassdiv{width:100%;background-color:red;height:100px}
+  box-shadow: blanchedalmond 4px 4px;
+}
+
+#sassdiv {
+  width: 100%;
+  background-color: red;
+  height: 100px;
+}
