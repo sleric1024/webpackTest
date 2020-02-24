@@ -28,5 +28,10 @@
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   },
-  "dependencies": {}
+  "dependencies": {
+    "browserslist": [
+      "> 1%",
+      "last 2 versions"
+    ]
+  }
 }

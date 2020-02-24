@@ -6,4 +6,6 @@ body {
   background-image: url(../images/github.jpg);
   width: 350px;
   height: 300px;
+  transform: rotate(45deg);
+  box-shadow: blanchedalmond 4px 4px;
 }

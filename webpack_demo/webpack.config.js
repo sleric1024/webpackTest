@@ -40,7 +40,22 @@ module.exports = {
           // }]
           use: ExtractTextPlugin.extract({
             fallback: "style-loader",
-            use: "css-loader"
+            use: [
+              {
+                loader: 'css-loader', options: { importLoaders: 1 }
+              },
+              {
+                loader: 'postcss-loader',
+                options: {
+                  ident: 'postcss',
+                  plugins: [
+                    require('autoprefixer')({
+                      'browsers': ['> 1%', 'last 2 versions']
+                    }),
+                  ]
+                }
+              }
+            ]
           })
         }, {
           test: /\.(png|jpg|gif)/,
