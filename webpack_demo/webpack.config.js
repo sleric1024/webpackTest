@@ -5,9 +5,16 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const glob = require('glob');
 const PurifyCSSPlugin = require('purifycss-webpack');
 
-var website ={
-  publicPath: "http://localhost:1818/"
-};
+let website;
+if (process.env.type === 'build') {
+  website = {
+    publicPath: 'http://localhost:1818/'
+  };
+} else {
+  website = {
+    publicPath: 'http://127.0.0.1:1818/'
+  };
+}
 
 module.exports = {
     devtool: 'esource-map',
