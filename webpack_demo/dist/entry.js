@@ -99,7 +99,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-document.getElementById('title').innerHTML='Hello Webpack';
+{
+  var hello = 'Hello';
+  var hi = "".concat(hello, " Webpack");
+  document.getElementById('title').innerHTML = hi;
+}
 console.log(111);
 
 /***/ }),
