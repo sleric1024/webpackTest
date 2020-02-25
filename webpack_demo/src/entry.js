@@ -12,4 +12,4 @@ import vue from 'vue';
 
 console.log(111);
 
-$("#sassdiv").html('This is SASS!');
+$("#sassdiv").text('This is SASS!');
