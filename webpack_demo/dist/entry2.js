@@ -81,17 +81,18 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */
+/******/ ({
+
+/***/ 2:
 /***/ (function(module, exports) {
 
 document.getElementById('title').innerHTML = 'Hello 12345';
 console.log(222);
 
 /***/ })
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=entry2.js.map

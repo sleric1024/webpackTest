@@ -9,3 +9,5 @@ import mysass from './css/mysass.scss';
 }
 
 console.log(111);
+
+$("#sassdiv").html('This is SASS!');
