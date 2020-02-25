@@ -6,6 +6,7 @@ const glob = require('glob');
 const PurifyCSSPlugin = require('purifycss-webpack');
 const entry = require('./webpack_config/entry_webpack.js');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 let website;
 if (process.env.type === 'build') {
@@ -154,6 +155,10 @@ module.exports = {
       //   filename: 'assets/js/[name].js',
       //   minChunks: 2
       // })
+      new CopyWebpackPlugin([{
+        from: __dirname + '/src/public',
+        to: './public'
+     }])
     ],
     //配置webpack开发服务功能
     devServer:{
