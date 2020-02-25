@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "webpack-dev-server --open",
-    "dev": "export type=dev&&webpack",
+    "dev": "export type=dev&&webpack --watch",
     "build": "export type=build&&webpack"
   },
   "author": "",

@@ -137,7 +137,8 @@ module.exports = {
       }),
       new webpack.ProvidePlugin({
         $: 'jquery'
-      })
+      }),
+      new webpack.BannerPlugin('This is my testing for webpack learning!')
     ],
     //配置webpack开发服务功能
     devServer:{
@@ -145,5 +146,10 @@ module.exports = {
       host: 'localhost',
       compress: true,
       port: 1818
+    },
+    watchOptions: {
+      poll: 1000,
+      aggregateTimeout: 500,
+      ignored: /node_modules/
     }
 };

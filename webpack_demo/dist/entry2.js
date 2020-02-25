@@ -1,3 +1,4 @@
+/*! This is my testing for webpack learning! */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
