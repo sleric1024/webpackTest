@@ -1,6 +1,8 @@
 import mycss from './css/index.css';
 import myless from './css/black.less';
 import mysass from './css/mysass.scss';
+import $ from 'jquery';
+import vue from 'vue';
 
 {
   let hello = 'Hello';

@@ -23,9 +23,19 @@ module.exports = {
 
     // <---- disables uglify.
     // minimizer: [new UglifyJsPlugin()] <----- if you want to customize it.
-    optimization:{
-        minimize: false, // <---- disables uglify.
-        // minimizer: [new UglifyJsPlugin()] <----- if you want to customize it.
+    optimization: {
+      minimize: false, // <---- disables uglify.
+      // minimizer: [new UglifyJsPlugin()] <----- if you want to customize it.
+
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+              name: "/assets/commons",
+              chunks: "initial",
+              minChunks: 2
+          }
+        }
+      }
     },
 
     //入口文件的配置项
@@ -138,7 +148,12 @@ module.exports = {
       new webpack.ProvidePlugin({
         $: 'jquery'
       }),
-      new webpack.BannerPlugin('This is my testing for webpack learning!')
+      new webpack.BannerPlugin('This is my testing for webpack learning!'),
+      // new webpack.optimize.CommonsChunkPlugin({
+      //   name: ['jquery', 'vue'],
+      //   filename: 'assets/js/[name].js',
+      //   minChunks: 2
+      // })
     ],
     //配置webpack开发服务功能
     devServer:{
